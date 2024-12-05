@@ -60,7 +60,7 @@ _Примечание_: Некоторые ссылки могут быть не
 
 1. Обновляемый на основе [шаблона](https://docs.openzeppelin.com/upgrades-plugins/#proxy-patterns): `UUPS`.
 
-2. Основан на [смарт-контракте токенезированного хранилища от OpenZeppelin]([contract from OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/erc4626)) по стандарту [ERC-4626](https://eips.ethereum.org/EIPS/eip-4626). Хранилище имеет базовый актив (базовый токен).
+2. Основан на [смарт-контракте токенезированного хранилища от OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/erc4626) по стандарту [ERC-4626](https://eips.ethereum.org/EIPS/eip-4626). Хранилище имеет базовый актив (базовый токен).
 
 3. Поддерживает разрешения в соответствии со [стандартом ERC-2612](https://eips.ethereum.org/EIPS/eip-2612): одобрение передачи токена можно получить с помощью подписи без дополнительной транзакции.
 
