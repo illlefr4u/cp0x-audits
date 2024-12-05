@@ -34,7 +34,8 @@ _Note_: Some links may be unavailable from Russia and other regions or open slow
 | Contract       | Address                                                                                                               | Notes |
 |----------------|-----------------------------------------------------------------------------------------------------------------------|-------|
 | tETH           | [0xD11c452fc99cF405034ee446803b6F6c1F6d5ED8](https://etherscan.io/address/0xD11c452fc99cF405034ee446803b6F6c1F6d5ED8) |       |
-| wstETH         | [0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0](https://etherscan.io/address/0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0) | 1, 2  |
+| wstETH         | [0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0](https://etherscan.io/address/0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0) | 1     |
+| IAU            | [0x1B6238E95bBCABEE58997c99BaDD4154ad68BA92](https://etherscan.io/address/0x1B6238E95bBCABEE58997c99BaDD4154ad68BA92) | 2     |
 | tETH-wstETH LP | [0xA10d15538E09479186b4D3278BA5c979110dDdB1](https://etherscan.io/token/0xa10d15538e09479186b4d3278ba5c979110dddb1)   | 3     |
 | tETH Vault     | [0x551d155760ae96050439AD24Ae98A96c765d761B](https://etherscan.io/address/0x551d155760ae96050439AD24Ae98A96c765d761B) |       |
 | tETH Router    | [0xeFA3fa8e85D2b3CfdB250CdeA156c2c6C90628F5](https://etherscan.io/address/0xeFA3fa8e85D2b3CfdB250CdeA156c2c6C90628F5) |       | 
@@ -44,9 +45,9 @@ Notes:
 
 1. The `wstETH` token [belongs](https://docs.lido.fi/deployed-contracts/#core-protocol) to the `Lido` company, not the `Treehous` one.
 
-2. The `wstETH` token is used as the vault asset (underlying token) in the `tETH` smart-contract.
+2. `IAU` stands for `internal accounting unit`. `IAU` is an ERC20 token that is used as the vault asset (underlying token) in the `tETH` smart-contract.
 
-3. LP stands for `lequidity pool`. The pool is not developed by `Treehouse`. See details below.
+3. `LP` stands for `lequidity pool`. The pool is not developed by `Treehouse`. See details below.
 
 ## Smart-Contracts Key Points
 

@@ -34,7 +34,8 @@ _Примечание_: Некоторые ссылки могут быть не
 | Контракт       | Адрес                                                                                                                 | Примечания |
 |----------------|-----------------------------------------------------------------------------------------------------------------------|------------|
 | tETH           | [0xD11c452fc99cF405034ee446803b6F6c1F6d5ED8](https://etherscan.io/address/0xD11c452fc99cF405034ee446803b6F6c1F6d5ED8) |            |
-| wstETH         | [0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0](https://etherscan.io/address/0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0) | 1, 2       |
+| wstETH         | [0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0](https://etherscan.io/address/0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0) | 1          |
+| IAU            | [0x1B6238E95bBCABEE58997c99BaDD4154ad68BA92](https://etherscan.io/address/0x1B6238E95bBCABEE58997c99BaDD4154ad68BA92) | 2          |
 | tETH-wstETH LP | [0xA10d15538E09479186b4D3278BA5c979110dDdB1](https://etherscan.io/token/0xa10d15538e09479186b4d3278ba5c979110dddb1)   | 3          |
 | tETH Vault     | [0x551d155760ae96050439AD24Ae98A96c765d761B](https://etherscan.io/address/0x551d155760ae96050439AD24Ae98A96c765d761B) |            |
 | tETH Router    | [0xeFA3fa8e85D2b3CfdB250CdeA156c2c6C90628F5](https://etherscan.io/address/0xeFA3fa8e85D2b3CfdB250CdeA156c2c6C90628F5) |            | 
@@ -44,9 +45,9 @@ _Примечание_: Некоторые ссылки могут быть не
 
 1. Токен `wstETH` [принадлежит](https://docs.lido.fi/deployed-contracts/#core-protocol) компании `Lido`, а не `Treehous`.
 
-2. Токен `wstETH` используется в качестве хранимого актива (базового токена) в смарт-контракте `tETH`.
+2. `IAU` -- это сокращение для `внутренней учётной единицы` (`internal accounting unit`). `IAU` является ERC20-токеном, который используется в качестве хранимого актива (базового токена) в смарт-контракте `tETH`.
 
-3. LP сокращение для `пула ликвидности`. Указанные пул не является разработкой `Treehouse`. См. подробности ниже.
+3. `LP` -- это сокращение для `пула ликвидности` (`liquidity pool`). Указанные пул не является разработкой `Treehouse`. См. подробности ниже.
 
 ## Ключевые сведения о смарт-контрактах
 
