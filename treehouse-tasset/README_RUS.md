@@ -34,13 +34,14 @@ _Примечание_: Некоторые ссылки могут быть не
 * ETH -- Ethereum.
 * IAU -- internal accounting unit -- внутренней учётная единица.
 * LP -- liquidity pool -- пул ликвидности.
+* multisig -- смарт контракт кошелька с мульти-подписью, для выполнения транзакции требуются подпись нескольких его владельцев.
 * NAV -- net asset value -- стоимость чистых активов.
 * PnL -- profit and loss -- доход и потери.
 * UUPS -- Universal Upgradeable Proxy Standard -- стандарт универсального обновляемого прокси.
 
 ## Ключевые адреса
 
-| Назначение             | Название контракта     | Адрес                                                                                                                 | Примечания |
+| Назначение контракта   | Название контракта     | Адрес                                                                                                                 | Примечания |
 |------------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------|------------|
 | Токен tETH             | ERC1967Proxy           | [0xD11c452fc99cF405034ee446803b6F6c1F6d5ED8](https://etherscan.io/address/0xD11c452fc99cF405034ee446803b6F6c1F6d5ED8) |            |
 | tETH implementation    | TAsset                 | [0xD1A622566F277AA76c3C47A30469432AAec95E38](https://etherscan.io/address/0xd1a622566f277aa76c3c47a30469432aaec95e38) |            |
@@ -61,6 +62,7 @@ _Примечание_: Некоторые ссылки могут быть не
 | NAV Helper             | NavHelper              | [0xf22Ca896427677507a9EF99D30B261659775ff56](https://etherscan.io/address/0xf22Ca896427677507a9EF99D30B261659775ff56) |            |
 | PnL Accounting Helper  | PnlAccountingHelper    | [0x57C23Fe7a1A8D86F1128196C7c22F8711E81437e](https://etherscan.io/address/0x57C23Fe7a1A8D86F1128196C7c22F8711E81437e) |            |
 | Treehouse Redemption   | TreehouseRedemption    | [0x0618dbdb3be798346e6d9c08c3c84658f94ad09f](https://etherscan.io/address/0x0618dbdb3be798346e6d9c08c3c84658f94ad09f) |            |
+| Multisig               | GnosisSafeProxy        | [0x22261B4D6F629D8cF946C3524df86bF7222901F6](https://etherscan.io/address/0x22261B4D6F629D8cF946C3524df86bF7222901F6) | 4          |
 
 Примечания:
 
@@ -69,6 +71,8 @@ _Примечание_: Некоторые ссылки могут быть не
 2. `IAU` является ERC20-токеном, который используется в качестве хранимого актива (базового токена) в смарт-контракте `tETH`.
 
 3.  AMM `tETH <=> wstETH` НЕ является разработкой `Treehouse`. См. подробности ниже.
+
+4. Multisig разработан компанией [Gnosis](https://www.gnosis.io/), а НЕ `Treehouse`. Multisig используется в качестве владельца большинства конатрактов `Treehouse`.
 
 ## Ключевые сведения о смарт-контрактах
 
@@ -100,3 +104,17 @@ _Примечание_: Некоторые ссылки могут быть не
 3. Адрес фабрики, которая использовалась для создания AMM: [0x6A8cbed756804B16E05E741eDaBd5cB544AE21bf](https://etherscan.io/address/0x6A8cbed756804B16E05E741eDaBd5cB544AE21bf)
 
 4. Фабрика AMM в документах компании `Curve`: [ссылка](https://docs.curve.fi/references/deployed-contracts/#stableswap-ng)
+
+### Кошелёк с мульти-подписью (Multisig)
+
+1. Текущий порог (минимальное количество подписей для выполнения транзакции): 5.
+
+2. Текущее количество владельцев: 7.
+
+3. Multisig является владельцем всех контрактов, разработанных `Treehouse` за исключением следующих:
+   * `Stratagy` -- нет роли владельца в исходном коде.
+   * `ActionExecutor` -- то же, что и выше.
+   * `WstETHRateProvider` -- то же, что и выше.
+   * `ChainlinkRateProvider` -- то же, что и выше.
+   * `NavHelper` -- то же, что и выше.
+   * `PnlAccountingHelper` -- есть роль владельца в исходном коде, но в развернутом контракте адрес владельца установлен равным нулю.
