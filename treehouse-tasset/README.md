@@ -62,7 +62,8 @@ _Note_: Some links may be unavailable from Russia and other regions or open slow
 | NAV Helper             | NavHelper              | [0xf22Ca896427677507a9EF99D30B261659775ff56](https://etherscan.io/address/0xf22Ca896427677507a9EF99D30B261659775ff56) |       |
 | PnL Accounting Helper  | PnlAccountingHelper    | [0x57C23Fe7a1A8D86F1128196C7c22F8711E81437e](https://etherscan.io/address/0x57C23Fe7a1A8D86F1128196C7c22F8711E81437e) |       |
 | Treehouse Redemption   | TreehouseRedemption    | [0x0618dbdb3be798346e6d9c08c3c84658f94ad09f](https://etherscan.io/address/0x0618dbdb3be798346e6d9c08c3c84658f94ad09f) |       |
-| Multisig               | GnosisSafeProxy        | [0x22261B4D6F629D8cF946C3524df86bF7222901F6](https://etherscan.io/address/0x22261B4D6F629D8cF946C3524df86bF7222901F6) | 4     |
+| Multisig-Owner         | GnosisSafeProxy        | [0x22261B4D6F629D8cF946C3524df86bF7222901F6](https://etherscan.io/address/0x22261B4D6F629D8cF946C3524df86bF7222901F6) | 4     |
+| Multisig-Treasury      | GnosisSafeProxy        | [0xB38f2aCb7B562475908c0C6E80a045Deb4023f70](https://etherscan.io/address/0xB38f2aCb7B562475908c0C6E80a045Deb4023f70) | 4     |
 
 Notes:
 
@@ -105,16 +106,24 @@ Notes:
 
 4. The AMM factory in the `Curve` docs: [link](https://docs.curve.fi/references/deployed-contracts/#stableswap-ng)
 
-### Multi-signature Wallet (Multisig)
+### Multisig-Owner
 
 1. The current threshold (minimum number of signatures to execute a transaction): 5.
 
 2. The current number of owners: 7.
 
-3. The multisig is the owner for all contracts developed by the `Treehouse` except the following:
+3. This multisig is the owner for all contracts developed by the `Treehouse` except the following:
     * `Stratagy` -- no owner role in the source code.
     * `ActionExecutor` -- same as above.
     * `WstETHRateProvider`-- same as above.
     * `ChainlinkRateProvider`-- same as above.
     * `NavHelper`-- same as above.
     * `PnlAccountingHelper` -- there is an owner role in the source code, but in the deployed contract the owner address is set to zero.
+
+### Multisig-Treasury
+
+1. The current threshold (minimum number of signatures to execute a transaction): 2.
+
+2. The current number of owners: 4.
+
+3. This multisig is used as a treasury to accumulate fees being received from the project.

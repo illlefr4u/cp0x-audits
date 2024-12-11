@@ -62,7 +62,8 @@ _Примечание_: Некоторые ссылки могут быть не
 | NAV Helper             | NavHelper              | [0xf22Ca896427677507a9EF99D30B261659775ff56](https://etherscan.io/address/0xf22Ca896427677507a9EF99D30B261659775ff56) |            |
 | PnL Accounting Helper  | PnlAccountingHelper    | [0x57C23Fe7a1A8D86F1128196C7c22F8711E81437e](https://etherscan.io/address/0x57C23Fe7a1A8D86F1128196C7c22F8711E81437e) |            |
 | Treehouse Redemption   | TreehouseRedemption    | [0x0618dbdb3be798346e6d9c08c3c84658f94ad09f](https://etherscan.io/address/0x0618dbdb3be798346e6d9c08c3c84658f94ad09f) |            |
-| Multisig               | GnosisSafeProxy        | [0x22261B4D6F629D8cF946C3524df86bF7222901F6](https://etherscan.io/address/0x22261B4D6F629D8cF946C3524df86bF7222901F6) | 4          |
+| Multisig-владелец      | GnosisSafeProxy        | [0x22261B4D6F629D8cF946C3524df86bF7222901F6](https://etherscan.io/address/0x22261B4D6F629D8cF946C3524df86bF7222901F6) | 4     |
+| Multisig-казна         | GnosisSafeProxy        | [0xB38f2aCb7B562475908c0C6E80a045Deb4023f70](https://etherscan.io/address/0xB38f2aCb7B562475908c0C6E80a045Deb4023f70) | 4     |
 
 Примечания:
 
@@ -105,16 +106,24 @@ _Примечание_: Некоторые ссылки могут быть не
 
 4. Фабрика AMM в документах компании `Curve`: [ссылка](https://docs.curve.fi/references/deployed-contracts/#stableswap-ng)
 
-### Кошелёк с мульти-подписью (Multisig)
+### Multisig-владелец
 
 1. Текущий порог (минимальное количество подписей для выполнения транзакции): 5.
 
 2. Текущее количество владельцев: 7.
 
-3. Multisig является владельцем всех контрактов, разработанных `Treehouse` за исключением следующих:
+3. Данный multisig является владельцем всех контрактов, разработанных `Treehouse` за исключением следующих:
    * `Stratagy` -- нет роли владельца в исходном коде.
    * `ActionExecutor` -- то же, что и выше.
    * `WstETHRateProvider` -- то же, что и выше.
    * `ChainlinkRateProvider` -- то же, что и выше.
    * `NavHelper` -- то же, что и выше.
    * `PnlAccountingHelper` -- есть роль владельца в исходном коде, но в развернутом контракте адрес владельца установлен равным нулю.
+
+### Multisig-казна
+
+1. Текущий порог (минимальное количество подписей для выполнения транзакции): 2.
+
+2. Текущее количество владельцев: 4.
+
+3. Данный multisig используется в качестве сокровищницы для накопления комиссий, получаемых от проекта.
